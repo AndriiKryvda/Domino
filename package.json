@@ -1,0 +1,22 @@
+{
+  "name": "domino-game",
+  "version": "1.0.0",
+  "description": "Multiplayer Domino game with web client",
+  "private": true,
+  "scripts": {
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "build": "npm run build:server && npm run build:client",
+    "start": "cd server && node dist/index.js",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "test:ui": "npx playwright test --config playwright.config.ts"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.8.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

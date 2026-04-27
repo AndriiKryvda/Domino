@@ -1,0 +1,55 @@
+
+Running 34 tests using 1 worker
+
+[1A[2K[1/34] [chromium] › tests\ui.spec.ts:60:7 › 1. Home Screen › TC-1.1 — Display Elements
+[1A[2K  1) [chromium] › tests\ui.spec.ts:60:7 › 1. Home Screen › TC-1.1 — Display Elements ───────────────
+
+    [31mTest timeout of 60000ms exceeded.[39m
+
+    Error: page.waitForSelector: Test timeout of 60000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.home-screen') to be visible[22m
+
+
+       9 |   const page = await context.newPage();
+      10 |   await page.goto('/');
+    > 11 |   await page.waitForSelector('.home-screen');
+         |              ^
+      12 |   return page;
+      13 | }
+      14 |
+        at openHome (C:\Projects\VibeCoding\Domino\tests\ui.spec.ts:11:14)
+        at C:\Projects\VibeCoding\Domino\tests\ui.spec.ts:61:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\ui-1-Home-Screen-TC-1-1-—-Display-Elements-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\ui-1-Home-Screen-TC-1-1-—-Display-Elements-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\ui-1-Home-Screen-TC-1-1-—-Display-Elements-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\ui-1-Home-Screen-TC-1-1-—-Display-Elements-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[2/34] [chromium] › tests\ui.spec.ts:70:7 › 1. Home Screen › TC-1.3 — Create Game Requires Name
+[1A[2K  2) [chromium] › tests\ui.spec.ts:70:7 › 1. Home Screen › TC-1.3 — Create Game Requires Name ──────
+
+    Error: worker process exited unexpectedly (code=4294967295, signal=null)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\ui-1-Home-Screen-TC-1-3-—-Create-Game-Requires-Name-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\ui-1-Home-Screen-TC-1-3-—-Create-Game-Requires-Name-chromium\error-context.md
+
+
+[1A[2K[3/34] [chromium] › tests\ui.spec.ts:85:7 › 1. Home Screen › TC-1.4 — Join Game Requires Name and Code
+
+---STDERR---
+
+EXIT: 4294967295

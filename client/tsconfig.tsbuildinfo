@@ -1,0 +1,1 @@
+{"root":["./src/activitylog.tsx","./src/app.tsx","./src/dominotile.tsx","./src/gameboard.tsx","./src/homescreen.tsx","./src/languageswitcher.tsx","./src/lobbyscreen.tsx","./src/snakeboard.tsx","./src/spectatorview.tsx","./src/i18n.tsx","./src/main.tsx","./src/types.ts","./src/usesocket.ts","./src/vite-env.d.ts"],"version":"5.9.3"}

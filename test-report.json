@@ -1,0 +1,1653 @@
+{
+  "config": {
+    "configFile": "C:\\Projects\\VibeCoding\\Domino\\playwright.config.ts",
+    "rootDir": "C:/Projects/VibeCoding/Domino/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Projects/VibeCoding/Domino/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Projects/VibeCoding/Domino/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "test-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm start",
+      "port": 3001,
+      "timeout": 30000,
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "ui.spec.ts",
+      "file": "ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "1. Home Screen",
+          "file": "ui.spec.ts",
+          "line": 67,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-1.1 — Display Elements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 270,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:39.639Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-8808077f15bbd69c2a2d",
+              "file": "ui.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "TC-1.3 — Create Game Requires Name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 347,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:40.048Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-23db516450256b531202",
+              "file": "ui.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "TC-1.4 — Join Game Requires Name and Code",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1287,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:40.401Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-60b99ec1671365a2f4fe",
+              "file": "ui.spec.ts",
+              "line": 93,
+              "column": 7
+            },
+            {
+              "title": "TC-1.6 — Game Settings on Create",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 202,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:41.696Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-c3f9c90f2229c3fe55a6",
+              "file": "ui.spec.ts",
+              "line": 114,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "2. Lobby Screen",
+          "file": "ui.spec.ts",
+          "line": 135,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-2.1 — Lobby Display",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 279,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:41.904Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-ee9b4242b6f1abc9ca4d",
+              "file": "ui.spec.ts",
+              "line": 136,
+              "column": 7
+            },
+            {
+              "title": "TC-2.3 — Second Player Joins",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 552,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:42.189Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-702fb679d7d2af6f3225",
+              "file": "ui.spec.ts",
+              "line": 147,
+              "column": 7
+            },
+            {
+              "title": "TC-2.4 — Add Computer Player",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 428,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:42.749Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-2790bfe0d79a794a3ed1",
+              "file": "ui.spec.ts",
+              "line": 162,
+              "column": 7
+            },
+            {
+              "title": "TC-2.5 — Remove Computer Player",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 540,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:43.183Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-6fbbed78ebfb7d04903d",
+              "file": "ui.spec.ts",
+              "line": 171,
+              "column": 7
+            },
+            {
+              "title": "TC-2.6 — Kick Human Player",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 685,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:43.728Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-ac1683d74674c5e9ecd6",
+              "file": "ui.spec.ts",
+              "line": 181,
+              "column": 7
+            },
+            {
+              "title": "TC-2.7 — Non-Host Cannot Manage Lobby",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 539,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:44.419Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-bcfda63af88514a0cb95",
+              "file": "ui.spec.ts",
+              "line": 200,
+              "column": 7
+            },
+            {
+              "title": "TC-2.8 — Start Game Requires Minimum Players",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 406,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:44.963Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-74c6890b51f378897f29",
+              "file": "ui.spec.ts",
+              "line": 215,
+              "column": 7
+            },
+            {
+              "title": "TC-2.10 — Max Players Enforced",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2778,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:45.375Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-c4868b83e8db10282e45",
+              "file": "ui.spec.ts",
+              "line": 232,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "3. Gameplay — Dealing & Start",
+          "file": "ui.spec.ts",
+          "line": 258,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-3.1 — Tile Deal 2 Players (7 tiles each)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 481,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:48.159Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-36367fce3d313bdb3c2f",
+              "file": "ui.spec.ts",
+              "line": 259,
+              "column": 7
+            },
+            {
+              "title": "TC-3.5 — Round Number Display",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 505,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:48.645Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-8c27f7394f5e1063a42c",
+              "file": "ui.spec.ts",
+              "line": 277,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "4. Gameplay — Tile Placement",
+          "file": "ui.spec.ts",
+          "line": 293,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-4.2 — Playable Tiles Highlighted on Turn",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 504,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:49.155Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-39d3b6a2d69f6a614d91",
+              "file": "ui.spec.ts",
+              "line": 294,
+              "column": 7
+            },
+            {
+              "title": "TC-4.1 — Valid Tile Placement",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10139,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\n    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:327:18",
+                        "location": {
+                          "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\u001b[22m\n\u001b[2m    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:327:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:41:49.664Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-4-Gameplay-—-Tile-Placement-TC-4-1-—-Valid-Tile-Placement-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-4-Gameplay-—-Tile-Placement-TC-4-1-—-Valid-Tile-Placement-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-4-Gameplay-—-Tile-Placement-TC-4-1-—-Valid-Tile-Placement-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-17db26c3ea91f659b3c4",
+              "file": "ui.spec.ts",
+              "line": 326,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "5. Gameplay — Drawing & Passing",
+          "file": "ui.spec.ts",
+          "line": 369,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-5.6 — Boneyard Count Display",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10201,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\n    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:371:18",
+                        "location": {
+                          "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\u001b[22m\n\u001b[2m    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:371:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:42:00.368Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-5-Gameplay-—-Drawing-Pa-0f54d--6-—-Boneyard-Count-Display-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-5-Gameplay-—-Drawing-Pa-0f54d--6-—-Boneyard-Count-Display-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-5-Gameplay-—-Drawing-Pa-0f54d--6-—-Boneyard-Count-Display-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-6cb33c2d7a672f642e53",
+              "file": "ui.spec.ts",
+              "line": 370,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "6. Turn Management",
+          "file": "ui.spec.ts",
+          "line": 389,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-6.1 — Turn Indicator Active Player",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10185,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\n    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:391:18",
+                        "location": {
+                          "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\u001b[22m\n\u001b[2m    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:391:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:42:11.285Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-1-—-Turn-Indicator-Active-Player-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-1-—-Turn-Indicator-Active-Player-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-1-—-Turn-Indicator-Active-Player-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-88e78b397c24aab4ef91",
+              "file": "ui.spec.ts",
+              "line": 390,
+              "column": 7
+            },
+            {
+              "title": "TC-6.3 — Turn Timer Countdown",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10189,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\n    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:406:18",
+                        "location": {
+                          "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.home-screen,.lobby-screen,.game-screen'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m10\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[90m// If we auto-reconnected to a game, clear session and reload\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.home-screen'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[36mfalse\u001b[39m)) {\n \u001b[90m 14 |\u001b[39m     \u001b[36mreturn\u001b[39m page\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\u001b[22m\n\u001b[2m    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:406:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:42:22.170Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-3-—-Turn-Timer-Countdown-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-3-—-Turn-Timer-Countdown-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-3-—-Turn-Timer-Countdown-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-6c60a49c969ef7feb766",
+              "file": "ui.spec.ts",
+              "line": 405,
+              "column": 7
+            },
+            {
+              "title": "TC-6.6 — Unlimited Timer",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10180,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\n    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:423:18",
+                        "location": {
+                          "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[90m// Clear session storage via init script to prevent auto-reconnect\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(() \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mtry\u001b[39m { sessionStorage\u001b[33m.\u001b[39mclear()\u001b[33m;\u001b[39m } \u001b[36mcatch\u001b[39m {}\n \u001b[90m 13 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[90m// Clear session storage via init script to prevent auto-reconnect\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(() \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mtry\u001b[39m { sessionStorage\u001b[33m.\u001b[39mclear()\u001b[33m;\u001b[39m } \u001b[36mcatch\u001b[39m {}\n \u001b[90m 13 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\u001b[22m\n\u001b[2m    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:423:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:42:33.011Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-6-—-Unlimited-Timer-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-6-—-Unlimited-Timer-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-6-Turn-Management-TC-6-6-—-Unlimited-Timer-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-125a48d0334328e67287",
+              "file": "ui.spec.ts",
+              "line": 422,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "7. Round End & Scoring",
+          "file": "ui.spec.ts",
+          "line": 442,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-7.1/7.4 — Round completes and shows summary",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 23044,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:42:43.866Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-13a94294de8641b6d9fd",
+              "file": "ui.spec.ts",
+              "line": 443,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "9. Computer Player AI",
+          "file": "ui.spec.ts",
+          "line": 537,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-9.4 — AI Makes Moves With Delay",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3899,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:07.063Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-a6f184e21d5afafb56df",
+              "file": "ui.spec.ts",
+              "line": 538,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "10. Disconnect & Reconnect",
+          "file": "ui.spec.ts",
+          "line": 575,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-10.4 — Leave During Game",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2667,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:10.969Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-7a55296ca194148cd1bf",
+              "file": "ui.spec.ts",
+              "line": 576,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "11. Spectator Mode",
+          "file": "ui.spec.ts",
+          "line": 604,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-11.1 — Join as Spectator",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 794,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:13.642Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-751655dc9cd86549c905",
+              "file": "ui.spec.ts",
+              "line": 605,
+              "column": 7
+            },
+            {
+              "title": "TC-11.2 — Spectator Read-Only",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 812,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:14.443Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-663f240db3378e91ecac",
+              "file": "ui.spec.ts",
+              "line": 631,
+              "column": 7
+            },
+            {
+              "title": "TC-11.3 — Spectator Count Display",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 811,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:15.260Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-bb47354a58a37fa1fea9",
+              "file": "ui.spec.ts",
+              "line": 652,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "12. Activity Log",
+          "file": "ui.spec.ts",
+          "line": 677,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-12.1 — Activity Log Events",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 503,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:16.077Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-5b15e173676ebec0d889",
+              "file": "ui.spec.ts",
+              "line": 678,
+              "column": 7
+            },
+            {
+              "title": "TC-12.2 — Activity Log Collapsible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 584,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:16.586Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-51f72a3923e5a947bae6",
+              "file": "ui.spec.ts",
+              "line": 697,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "14. Opponent Visibility",
+          "file": "ui.spec.ts",
+          "line": 724,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-14.1 — Own Tiles Visible, Opponent Tiles Hidden",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 633,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:17.175Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-f0ce60589367a312ad75",
+              "file": "ui.spec.ts",
+              "line": 725,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "15. Board Rendering",
+          "file": "ui.spec.ts",
+          "line": 755,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-15.1 — Snake Board Renders",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3498,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:17.814Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-4b9a94ff72a1818a4a22",
+              "file": "ui.spec.ts",
+              "line": 756,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "17. Internationalization",
+          "file": "ui.spec.ts",
+          "line": 780,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-17.1 — Language Switcher",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 293,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:21.317Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-8b34d4a8603c3504b237",
+              "file": "ui.spec.ts",
+              "line": 781,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "18. Security",
+          "file": "ui.spec.ts",
+          "line": 815,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-18.2 — XSS Prevention",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 272,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:21.616Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-93871bf57f9103f0025c",
+              "file": "ui.spec.ts",
+              "line": 816,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "19. Lifecycle Edge Cases",
+          "file": "ui.spec.ts",
+          "line": 844,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-19.1 — Leave During Lobby",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10397,
+                      "error": {
+                        "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\n    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:849:21",
+                        "location": {
+                          "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                          "column": 14,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[90m// Clear session storage via init script to prevent auto-reconnect\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(() \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mtry\u001b[39m { sessionStorage\u001b[33m.\u001b[39mclear()\u001b[33m;\u001b[39m } \u001b[36mcatch\u001b[39m {}\n \u001b[90m 13 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                            "column": 14,
+                            "line": 11
+                          },
+                          "message": "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.home-screen,.lobby-screen,.game-screen') to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m page \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[90m// Clear session storage via init script to prevent auto-reconnect\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39maddInitScript(() \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mtry\u001b[39m { sessionStorage\u001b[33m.\u001b[39mclear()\u001b[33m;\u001b[39m } \u001b[36mcatch\u001b[39m {}\n \u001b[90m 13 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at openHome (C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:11:14)\u001b[22m\n\u001b[2m    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:849:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:21.893Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-19-Lifecycle-Edge-Cases-TC-19-1-—-Leave-During-Lobby-chromium\\test-failed-2.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-19-Lifecycle-Edge-Cases-TC-19-1-—-Leave-During-Lobby-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-19-Lifecycle-Edge-Cases-TC-19-1-—-Leave-During-Lobby-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-19-Lifecycle-Edge-Cases-TC-19-1-—-Leave-During-Lobby-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                        "column": 14,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-6539bfee5247fc27f5a9",
+              "file": "ui.spec.ts",
+              "line": 845,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "20. Deployment",
+          "file": "ui.spec.ts",
+          "line": 867,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-20.1 — Health Check Endpoint",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 44,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m429\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m429\u001b[39m\n    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:870:27",
+                        "location": {
+                          "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                          "column": 27,
+                          "line": 870
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 868 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 869 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                            "column": 27,
+                            "line": 870
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m429\u001b[39m\n\n\u001b[0m \u001b[90m 868 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 869 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts:870:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-07T14:43:32.940Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-20-Deployment-TC-20-1-—-Health-Check-Endpoint-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Projects\\VibeCoding\\Domino\\test-results\\ui-20-Deployment-TC-20-1-—-Health-Check-Endpoint-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Projects\\VibeCoding\\Domino\\tests\\ui.spec.ts",
+                        "column": 27,
+                        "line": 870
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d425444c687fa36b5882-766ddfdbae5464cbb424",
+              "file": "ui.spec.ts",
+              "line": 868,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-04-07T14:41:39.039Z",
+    "duration": 113997.31700000001,
+    "expected": 27,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}
