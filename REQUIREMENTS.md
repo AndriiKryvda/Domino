@@ -32,6 +32,7 @@ A real-time multiplayer Domino game with a self-hosted server (Linux) and a resp
 | F-01 | A player can **create a new game**, becoming the game host |
 | F-02 | The host sets game options: target score (default 100), number of players (2–6) |
 | F-03 | Creating a game produces a **shareable join code / link** that other players use to join |
+| F-03a | After creating a game, the host can **see the join code** in the lobby and **copy it** with a single click/tap |
 | F-04 | Any player with the join code/link can **join a game** before it starts |
 | F-05 | The host can **add computer players** to fill empty slots (easy / medium / hard difficulty) |
 | F-06 | The host can **remove computer players** before the game starts |

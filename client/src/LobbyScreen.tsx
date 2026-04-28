@@ -22,12 +22,34 @@ const LobbyScreen: React.FC<LobbyScreenProps> = ({
   const canStart = gameState.players.length >= 2;
   const canAdd = gameState.players.length < gameState.settings.maxPlayers;
   const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
 
-  const copyCode = () => {
-    navigator.clipboard.writeText(gameState.joinCode).then(() => {
+  const copyCode = async () => {
+    setCopied(false);
+    setCopyError(false);
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(gameState.joinCode);
+      } else {
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = gameState.joinCode;
+        tempTextArea.style.position = 'fixed';
+        tempTextArea.style.left = '-9999px';
+        document.body.appendChild(tempTextArea);
+        tempTextArea.focus();
+        tempTextArea.select();
+        const copiedWithExec = document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+        if (!copiedWithExec) throw new Error('Clipboard copy failed');
+      }
+
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    }).catch(() => {});
+    } catch {
+      setCopyError(true);
+      setTimeout(() => setCopyError(false), 2000);
+    }
   };
 
   return (
@@ -39,7 +61,11 @@ const LobbyScreen: React.FC<LobbyScreenProps> = ({
             <div className="join-code" onClick={copyCode} title="Click to copy code">
               {gameState.joinCode}
             </div>
+            <button className="btn-secondary btn-small" onClick={copyCode}>
+              {t('lobby.copyCode')}
+            </button>
             {copied && <span style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600 }}>{t('lobby.copied')}</span>}
+            {copyError && <span style={{ fontSize: 12, color: 'var(--danger)', fontWeight: 600 }}>{t('lobby.copyFailed')}</span>}
             <LanguageSwitcher />
           </div>
         </div>

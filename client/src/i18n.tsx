@@ -45,10 +45,12 @@ const translations = {
   'lobby.easyBot': { en: '+ Easy Bot', uk: '+ Легкий бот' },
   'lobby.mediumBot': { en: '+ Medium Bot', uk: '+ Середній бот' },
   'lobby.hardBot': { en: '+ Hard Bot', uk: '+ Складний бот' },
+  'lobby.copyCode': { en: 'Copy Code', uk: 'Копіювати код' },
   'lobby.startGame': { en: 'Start Game', uk: 'Почати гру' },
   'lobby.needPlayers': { en: 'Need 2+ players', uk: 'Потрібно 2+ гравців' },
   'lobby.leave': { en: 'Leave', uk: 'Вийти' },
   'lobby.copied': { en: 'Copied!', uk: 'Скопійовано!' },
+  'lobby.copyFailed': { en: 'Copy failed', uk: 'Не вдалося скопіювати' },
 
   // Game board
   'game.round': { en: 'Round', uk: 'Раунд' },
