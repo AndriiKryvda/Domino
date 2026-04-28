@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { PlayerGameState, PlacementEnd, RoundResult, GameResult, GameNotification } from './types';
 import { useI18n } from './i18n';
 import LanguageSwitcher from './LanguageSwitcher';
 import DominoTile from './DominoTile';
 import ActivityLog from './ActivityLog';
 import SnakeBoard from './SnakeBoard';
+
+const TURN_BEEP_STORAGE_KEY = 'domino_turn_beep_enabled';
+
+function loadTurnBeepEnabled(): boolean {
+  try {
+    const raw = localStorage.getItem(TURN_BEEP_STORAGE_KEY);
+    if (raw === null) return true;
+    return raw === '1';
+  } catch {
+    return true;
+  }
+}
 
 interface GameBoardProps {
   gameState: PlayerGameState;
@@ -27,6 +39,9 @@ const GameBoard: React.FC<GameBoardProps> = ({
 }) => {
   const { t } = useI18n();
   const [selectedTileId, setSelectedTileId] = useState<string | null>(null);
+  const [turnBeepEnabled, setTurnBeepEnabled] = useState<boolean>(loadTurnBeepEnabled);
+  const previousIsMyTurnRef = useRef(false);
+  const audioContextRef = useRef<AudioContext | null>(null);
 
   const me = gameState.players.find(p => p.id === playerId);
   const isMyTurn = gameState.players[gameState.currentPlayerIndex]?.id === playerId;
@@ -41,6 +56,76 @@ const GameBoard: React.FC<GameBoardProps> = ({
   const hasValidMoves = gameState.validMoves.length > 0;
   const canDraw = !hasValidMoves && gameState.boneyardCount > 0;
   const canPass = isMyTurn && !hasValidMoves && gameState.boneyardCount === 0;
+
+  const playTurnBeep = useCallback(() => {
+    if (!turnBeepEnabled) return;
+
+    try {
+      const AudioContextCtor = window.AudioContext;
+      if (!AudioContextCtor) return;
+
+      if (!audioContextRef.current) {
+        audioContextRef.current = new AudioContextCtor();
+      }
+
+      const ctx = audioContextRef.current;
+      if (!ctx) return;
+
+      if (ctx.state === 'suspended') {
+        void ctx.resume();
+      }
+
+      const now = ctx.currentTime;
+      const oscillator = ctx.createOscillator();
+      const gainNode = ctx.createGain();
+
+      oscillator.type = 'sine';
+      oscillator.frequency.setValueAtTime(880, now);
+
+      gainNode.gain.setValueAtTime(0.0001, now);
+      gainNode.gain.exponentialRampToValueAtTime(0.14, now + 0.015);
+      gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 0.22);
+
+      oscillator.connect(gainNode);
+      gainNode.connect(ctx.destination);
+
+      oscillator.start(now);
+      oscillator.stop(now + 0.23);
+    } catch {
+      // Ignore audio errors (autoplay restrictions/device limitations)
+    }
+  }, [turnBeepEnabled]);
+
+  useEffect(() => {
+    if (gameState.phase !== 'playing') {
+      previousIsMyTurnRef.current = isMyTurn;
+      return;
+    }
+
+    if (!previousIsMyTurnRef.current && isMyTurn) {
+      playTurnBeep();
+    }
+
+    previousIsMyTurnRef.current = isMyTurn;
+  }, [gameState.phase, isMyTurn, playTurnBeep]);
+
+  useEffect(() => {
+    return () => {
+      if (audioContextRef.current) {
+        void audioContextRef.current.close();
+      }
+    };
+  }, []);
+
+  const toggleTurnBeep = () => {
+    setTurnBeepEnabled(prev => {
+      const next = !prev;
+      try {
+        localStorage.setItem(TURN_BEEP_STORAGE_KEY, next ? '1' : '0');
+      } catch {}
+      return next;
+    });
+  };
 
   const handleTileClick = (tileId: string) => {
     if (!isMyTurn || gameState.phase !== 'playing') return;
@@ -85,6 +170,13 @@ const GameBoard: React.FC<GameBoardProps> = ({
               {turnTimer}s
             </span>
           )}
+          <button
+            className="btn-secondary btn-small"
+            onClick={toggleTurnBeep}
+            title={turnBeepEnabled ? t('game.turnBeepOn') : t('game.turnBeepOff')}
+          >
+            {turnBeepEnabled ? t('game.turnBeepOn') : t('game.turnBeepOff')}
+          </button>
           <LanguageSwitcher />
           <button className="btn-danger btn-small" onClick={onLeave}>{t('game.leave')}</button>
         </div>

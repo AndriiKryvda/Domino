@@ -53,6 +53,8 @@ const translations = {
   // Game board
   'game.round': { en: 'Round', uk: 'Раунд' },
   'game.leave': { en: 'Leave', uk: 'Вийти' },
+  'game.turnBeepOn': { en: 'Beep: On', uk: 'Сигнал: увімк.' },
+  'game.turnBeepOff': { en: 'Beep: Off', uk: 'Сигнал: вимк.' },
   'game.yourTurn': { en: 'Your turn!', uk: 'Ваш хід!' },
   'game.playerTurn': { en: "'s turn", uk: ' ходить' },
   'game.playTileToStart': { en: 'Play a tile to start!', uk: 'Покладіть кістку, щоб почати!' },

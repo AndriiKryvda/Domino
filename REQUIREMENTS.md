@@ -83,6 +83,7 @@ A real-time multiplayer Domino game with a self-hosted server (Linux) and a resp
 | N-01 | Real-time updates via **WebSockets** (tile placements, draws, turn changes, player join/leave) |
 | N-02 | **Visual notifications** for: your turn, player joined/left, round ended, game ended |
 | N-03 | Optional **sound effects** for tile placement, drawing, turn alert (mutable) |
+| N-04 | When a player's turn starts, the client plays a short **beep** (toggleable in settings) |
 
 ---
 
