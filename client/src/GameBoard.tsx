@@ -171,11 +171,19 @@ const GameBoard: React.FC<GameBoardProps> = ({
             </span>
           )}
           <button
-            className="btn-secondary btn-small"
+            className={`sound-toggle-btn${turnBeepEnabled ? '' : ' is-muted'}`}
             onClick={toggleTurnBeep}
-            title={turnBeepEnabled ? t('game.turnBeepOn') : t('game.turnBeepOff')}
+            data-tooltip={turnBeepEnabled ? t('game.turnBeepOn') : t('game.turnBeepOff')}
+            aria-label={turnBeepEnabled ? t('game.turnBeepOn') : t('game.turnBeepOff')}
+            aria-pressed={!turnBeepEnabled}
           >
-            {turnBeepEnabled ? t('game.turnBeepOn') : t('game.turnBeepOff')}
+            <span className="sound-toggle-icon" aria-hidden="true">
+              <span className="speaker-body" />
+              <span className="speaker-cone" />
+              <span className="speaker-wave wave-1" />
+              <span className="speaker-wave wave-2" />
+              <span className="mute-slash" />
+            </span>
           </button>
           <LanguageSwitcher />
           <button className="btn-danger btn-small" onClick={onLeave}>{t('game.leave')}</button>
