@@ -92,7 +92,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCreateGame, onJoinGame, onSpe
           <div>
             <label>{t('home.maxPlayers')}</label>
             <select value={maxPlayers} onChange={e => setMaxPlayers(Number(e.target.value))}>
-              {[2, 3, 4, 5, 6].map(n => (
+              {[2, 3, 4, 5].map(n => (
                 <option key={n} value={n}>{n} {t('home.players')}</option>
               ))}
             </select>

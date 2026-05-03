@@ -44,7 +44,7 @@
 ### TC-1.6 — Game Settings on Create (P1)
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Click "Create Game" and inspect settings | Options for target score (50/100/150/200), max players (2-6), and turn timer (Unlimited/30s/60s/90s) are visible |
+| 1 | Click "Create Game" and inspect settings | Options for target score (50/100/150/200), max players (2-5), and turn timer (Unlimited/30s/60s/90s) are visible |
 | 2 | Set target score to 150, max players to 3, timer to 30s | Settings are accepted |
 | 3 | Create the game | Lobby reflects the chosen settings |
 
@@ -114,6 +114,7 @@
 |------|--------|-----------------|
 | 1 | Create game with maxPlayers = 2 | Lobby allows max 2 players |
 | 2 | Host + 1 player join; a third player tries to join | Third player receives "Game is full" error |
+| 3 | Create game with maxPlayers = 5; add players up to the limit | "Add Computer" button disabled when lobby is full |
 
 ---
 
@@ -126,11 +127,10 @@
 | 2 | Start a game with 3 players | Each player receives 7 tiles; boneyard = 28 - 21 = 7 |
 | 3 | Start a game with 4 players | Each player receives 7 tiles; boneyard = 28 - 28 = 0 |
 
-### TC-3.2 — Tile Deal: 5-6 Players (P0) [Req: Deal rule]
+### TC-3.2 — Tile Deal: 5 Players (P0) [Req: Deal rule]
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Start a game with 5 players | Each receives 5 tiles; boneyard = 28 - 25 = 3 |
-| 2 | Start a game with 6 players | Each receives 5 tiles; boneyard = 28 - 30 — **INVALID**: max tiles = 28, so verify 5 tiles not possible for 6 players or adjusted handling |
+| 1 | Start a game with 5 players | Each player receives 5 tiles; boneyard = 28 - 25 = 3 |
 
 ### TC-3.3 — First Move: Highest Double (P0) [Req: First move rule]
 | Step | Action | Expected Result |
@@ -237,6 +237,13 @@
 | 1 | During game, observe boneyard count | Count is visible and shows remaining tiles |
 | 2 | After a draw | Count decrements by 1 |
 
+### TC-5.7 — Auto-Draw Setting (P2) [Req G-06]
+| Step | Action | Expected Result |
+|------|--------|-----------------|
+| 1 | By default (manual draw mode), on your turn with no valid moves and boneyard > 0 | Draw button is shown; player must click it manually |
+| 2 | Enable the auto-draw setting before creating/starting the game | When player has no valid moves and boneyard > 0, a tile is drawn automatically without requiring a click |
+| 3 | After auto-draw, drawn tile is playable | Player can immediately place it; if not playable, turn passes automatically |
+
 ---
 
 ## 6. Gameplay — Turn Management
@@ -334,11 +341,11 @@
 | 1 | A player reaches or exceeds the target score (e.g., 100 points) | Game ends after the round |
 | 2 | Game over screen is displayed | Winner announced, final rankings/leaderboard shown |
 
-### TC-8.2 — Game Over Display (P1) [Req G-11]
+### TC-8.2 — Game Over Display (P1) [Req G-12]
 | Step | Action | Expected Result |
 |------|--------|-----------------|
 | 1 | Game ends | Overlay shows: winner with trophy, final rankings with scores for all players |
-| 2 | Options available | "Back to Home" or similar navigation |
+| 2 | Options available | Both "Play Again" and "Back to Home" buttons are shown |
 
 ### TC-8.3 — Different Target Scores (P2) [Req F-02]
 | Step | Action | Expected Result |
@@ -368,13 +375,13 @@
 | 1 | Start game with Hard bot | Bot plays valid tiles |
 | 2 | Observe strategy | Bot prefers high-pip tiles, attempts blocking, plays strategically |
 
-### TC-9.4 — AI Move Delay (P1) [Req G-12]
+### TC-9.4 — AI Move Delay (P1) [Req G-13]
 | Step | Action | Expected Result |
 |------|--------|-----------------|
 | 1 | Observe computer player's turn | Bot waits 1-2 seconds before playing (natural feel) |
 | 2 | Move is visible after the delay | Tile appears on board with brief pause |
 
-### TC-9.5 — AI Immediate Pass When Blocked (P1) [Req G-13]
+### TC-9.5 — AI Immediate Pass When Blocked (P1) [Req G-14]
 | Step | Action | Expected Result |
 |------|--------|-----------------|
 | 1 | Bot has no valid moves AND boneyard is empty | Bot passes immediately (no artificial delay) |
@@ -782,6 +789,27 @@
 
 ---
 
+## 24. Sound Effects & Beep Notifications
+
+### TC-24.1 — Sound Effects (P2) [Req N-03]
+| Step | Action | Expected Result |
+|------|--------|-----------------|
+| 1 | Place a tile during your turn | A sound effect plays for tile placement |
+| 2 | Draw a tile from the boneyard | A sound effect plays for the draw action |
+| 3 | Your turn begins | A turn-alert sound plays |
+| 4 | Open sound/mute settings and mute all sounds | All sound effects are silenced |
+| 5 | Unmute sounds | Sound effects resume on subsequent actions |
+
+### TC-24.2 — Turn Alert Beep Toggle Icon (P1) [Req N-04, N-04a]
+| Step | Action | Expected Result |
+|------|--------|-----------------|
+| 1 | During gameplay, observe the top-right area of the game UI | A beep toggle button is visible as an **icon** (not a text label) |
+| 2 | Beep is enabled; it becomes your turn | A short beep plays at the start of your turn |
+| 3 | Click the beep toggle icon to disable | Icon changes to an "off" visual state; no beep plays on subsequent turns |
+| 4 | Click the beep toggle icon to re-enable | Icon changes to an "on" visual state; beep resumes on next turn |
+
+---
+
 ## Summary
 
 | Section | Test Cases | P0 | P1 | P2 | P3 |
@@ -790,7 +818,7 @@
 | 2. Lobby Screen | 10 | 2 | 5 | 2 | 0 |
 | 3. Tile Dealing & Round Start | 5 | 3 | 1 | 1 | 0 |
 | 4. Tile Placement | 7 | 2 | 2 | 2 | 0 |
-| 5. Drawing & Passing | 6 | 2 | 3 | 0 | 0 |
+| 5. Drawing & Passing | 7 | 2 | 3 | 1 | 0 |
 | 6. Turn Management | 7 | 2 | 2 | 1 | 0 |
 | 7. Round End & Scoring | 6 | 3 | 2 | 0 | 0 |
 | 8. Game End | 3 | 1 | 1 | 1 | 0 |
@@ -809,4 +837,5 @@
 | 21. Performance | 2 | 0 | 0 | 2 | 0 |
 | 22. Scoreboard | 2 | 0 | 1 | 1 | 0 |
 | 23. Error Handling | 3 | 0 | 2 | 1 | 0 |
-| **TOTAL** | **111** | **22** | **44** | **33** | **3** |
+| 24. Sound Effects & Beep | 2 | 0 | 1 | 1 | 0 |
+| **TOTAL** | **114** | **22** | **45** | **35** | **3** |

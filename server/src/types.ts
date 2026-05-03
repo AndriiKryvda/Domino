@@ -125,6 +125,6 @@ export const DEFAULT_SETTINGS: GameSettings = {
 };
 
 export const MIN_PLAYERS = 2;
-export const MAX_PLAYERS = 6;
+export const MAX_PLAYERS = 5;
 export const RECONNECT_GRACE_SECONDS = 60;
 export const IDLE_TIMEOUT_MINUTES = 30;

@@ -11,8 +11,8 @@ A real-time multiplayer Domino game with a self-hosted server (Linux) and a resp
 | Rule | Detail |
 |------|--------|
 | **Tile set** | Standard double-six set (28 tiles: [0\|0] through [6\|6]) |
-| **Players** | 2–6 (any mix of human and computer) |
-| **Deal** | 2–4 players → 7 tiles each; 5–6 players → 5 tiles each |
+| **Players** | 2–5 (any mix of human and computer) |
+| **Deal** | 2–4 players → 7 tiles each; 5 players → 5 tiles each (boneyard = 3) |
 | **First move** | The player holding the highest double starts (first round). Subsequent rounds: the winner of the previous round starts |
 | **Play direction** | Clockwise |
 | **Placement** | A tile is placed at either open end of the chain if one of its halves matches the open end value |
@@ -30,7 +30,7 @@ A real-time multiplayer Domino game with a self-hosted server (Linux) and a resp
 | ID | Requirement |
 |----|-------------|
 | F-01 | A player can **create a new game**, becoming the game host |
-| F-02 | The host sets game options: target score (default 100), number of players (2–6) |
+| F-02 | The host sets game options: target score (default 100), number of players (2–5), turn timer (30s / 60s / 90s / unlimited; default: unlimited) |
 | F-03 | Creating a game produces a **shareable join code / link** that other players use to join |
 | F-03a | After creating a game, the host can **see the join code** in the lobby and **copy it** with a single click/tap |
 | F-04 | Any player with the join code/link can **join a game** before it starts |
@@ -40,7 +40,7 @@ A real-time multiplayer Domino game with a self-hosted server (Linux) and a resp
 | F-08 | The host can **kick a player** from the lobby before the game starts |
 | F-09 | A player can **leave a game** at any time; their seat is replaced by a computer player if the round is in progress |
 | F-10 | When all human players leave, the game is terminated and cleaned up |
-| F-11 | The lobby shows a **player list** with names, ready status, and human/computer indicator |
+| F-11 | The lobby shows a **player list** with names and human/computer indicator |
 | F-12 | Any user can **spectate** a game by opening its link; spectators see the board and all played tiles but **not** any player's hand |
 | F-13 | Spectators see a **read-only view**: tile chain, scoreboard, turn indicator, boneyard count, and opponent tile counts |
 | F-14 | The spectator count is displayed in the game UI |
@@ -65,9 +65,9 @@ A real-time multiplayer Domino game with a self-hosted server (Linux) and a resp
 | G-09 | **Boneyard count** (remaining tiles) is displayed |
 | G-10 | An **activity log** is displayed on the game board (top-right, collapsible) showing all game events: tile placements, draws, passes, player joins/leaves, round results |
 | G-11 | After each round, a **round summary** shows tiles left per player, points scored, and cumulative scores |
-| G-11 | After the final round, a **game summary / leaderboard** is shown |
-| G-12 | Computer players make moves with a short artificial delay (1–2 seconds) to feel natural |
-| G-13 | When a computer player has **no valid moves and the boneyard is empty**, it **passes immediately** (no artificial delay) |
+| G-12 | After the final round, a **game summary / leaderboard** is shown |
+| G-13 | Computer players make moves with a short artificial delay (1–2 seconds) to feel natural |
+| G-14 | When a computer player has **no valid moves and the boneyard is empty**, it **passes immediately** (no artificial delay) |
 
 ### 3.3 Computer Player AI
 
