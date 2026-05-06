@@ -13,7 +13,14 @@ Use scp, rsync, or git. Exclude build artifacts:
   rsync -av --exclude node_modules --exclude '*/dist' --exclude '*/node_modules' \
     /mnt/c/Projects/VibeCoding/Domino/ user@linux-host:/home/user/Domino/
 
-If using git, just push and clone on the other side.
+If using git, just push and clone on the other side:
+
+  # First-time clone:
+  git clone https://git.epam.com/andrii_kryvda/domino.git /home/user/Domino
+
+  # Get latest changes (subsequent updates):
+  cd /home/user/Domino
+  git pull origin main
 
 2. Build the Docker image on the Linux machine
 -----------------------------------------------
