@@ -5,6 +5,18 @@ import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
 import { GameManager } from './GameManager';
+import { socketLimiter } from './socketLimiter';
+import {
+  validateCreateGameInput,
+  validateJoinGameInput,
+  validateSpectateInput,
+  validateAddComputerInput,
+  validateRemoveComputerInput,
+  validateKickPlayerInput,
+  validatePlaceTileInput,
+  validateGameId,
+  validatePlayerId,
+} from './validation';
 
 const PORT = parseInt(process.env.PORT || '3002', 10);
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
@@ -62,6 +74,17 @@ const gameManager = new GameManager({
   },
 });
 
+// Helper: check rate limit and return early if exceeded
+function checkRateLimit(socketId: string, callback?: (err: any) => void): boolean {
+  const result = socketLimiter.allow(socketId);
+  if (!result) {
+    console.warn(`[rateLimit] Socket ${socketId} exceeded event limit`);
+    if (callback) callback({ success: false, error: 'Too many requests. Please wait a moment.' });
+    return false;
+  }
+  return true;
+}
+
 // Socket.IO connection handling
 io.on('connection', (socket) => {
   if (LOG_LEVEL === 'debug') {
@@ -69,6 +92,9 @@ io.on('connection', (socket) => {
   }
 
   socket.on('game:create', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const v = validateCreateGameInput(data?.playerName, data?.settings);
+    if (!v.success) return callback({ success: false, error: v.error });
     try {
       const result = gameManager.createGame(socket.id, data.playerName, data.settings || {});
       callback(result);
@@ -79,6 +105,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:join', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const v = validateJoinGameInput(data?.joinCode, data?.playerName);
+    if (!v.success) return callback({ success: false, error: v.error });
     try {
       const result = gameManager.joinGame(socket.id, data.joinCode, data.playerName);
       callback(result);
@@ -89,6 +118,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:spectate', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const v = validateSpectateInput(data?.joinCode);
+    if (!v.success) return callback({ success: false, error: v.error });
     try {
       const result = gameManager.spectateGame(socket.id, data.joinCode);
       callback(result);
@@ -99,6 +131,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:addComputer', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const v = validateAddComputerInput(data?.difficulty);
+    if (!v.success) return callback({ success: false, error: v.error });
     try {
       const result = gameManager.addComputer(socket.id, data.difficulty);
       callback(result);
@@ -109,6 +144,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:removeComputer', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const v = validateRemoveComputerInput(data?.playerId);
+    if (!v.success) return callback({ success: false, error: v.error });
     try {
       const result = gameManager.removeComputer(socket.id, data.playerId);
       callback(result);
@@ -119,6 +157,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:kickPlayer', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const v = validateKickPlayerInput(data?.playerId);
+    if (!v.success) return callback({ success: false, error: v.error });
     try {
       const result = gameManager.kickPlayer(socket.id, data.playerId);
       callback(result);
@@ -129,6 +170,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:start', (callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
     try {
       const result = gameManager.startGame(socket.id);
       callback(result);
@@ -139,6 +181,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:placeTile', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const v = validatePlaceTileInput(data?.tileId, data?.end);
+    if (!v.success) return callback({ success: false, error: v.error });
     try {
       const result = gameManager.placeTile(socket.id, data.tileId, data.end);
       callback(result);
@@ -149,6 +194,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:draw', (callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
     try {
       const result = gameManager.draw(socket.id);
       callback(result);
@@ -159,6 +205,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:pass', (callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
     try {
       const result = gameManager.pass(socket.id);
       callback(result);
@@ -169,6 +216,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:leave', () => {
+    if (!checkRateLimit(socket.id)) return;
     try {
       gameManager.leaveGame(socket.id);
     } catch (err) {
@@ -177,6 +225,11 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:reconnect', (data, callback) => {
+    if (!checkRateLimit(socket.id, callback)) return;
+    const gv = validateGameId(data?.gameId);
+    if (!gv.success) return callback({ success: false, error: gv.error });
+    const pv = validatePlayerId(data?.playerId);
+    if (!pv.success) return callback({ success: false, error: pv.error });
     try {
       const result = gameManager.reconnect(socket.id, data.gameId, data.playerId);
       callback(result);
@@ -187,6 +240,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('game:nextRound', () => {
+    if (!checkRateLimit(socket.id)) return;
     try {
       gameManager.nextRound(socket.id);
     } catch (err) {
