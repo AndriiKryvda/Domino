@@ -57,18 +57,41 @@ The game will be available at `http://<your-host-ip>:3001`
 
 ## Development
 
+### Quick Start (both server and client)
+
 ```bash
-# Install all dependencies
+# Install all dependencies (root + server + client)
 npm run install:all
 
-# Start server in watch mode
+# Start both server and client simultaneously (concurrent mode)
+npm run dev
+```
+
+This launches:
+- **Server** on `http://localhost:3001` (Express + Socket.IO)
+- **Client** on `http://localhost:5173` (Vite dev server)
+
+### Manual Development (separate terminals)
+
+```bash
+# Install all dependencies (root + server + client)
+npm run install:all
+
+# Terminal 1 — Start server in watch mode (auto-restarts on changes)
 npm run dev:server
 
-# Start client dev server (separate terminal)
+# Terminal 2 — Start client dev server (HMR enabled)
 npm run dev:client
+```
 
-# Build for production
+### Build for Production
+
+```bash
+# Build both server and client
 npm run build
+
+# Start the production server
+npm run start
 ```
 
 ## Running Tests
@@ -96,10 +119,29 @@ docker build -t domino-game . && docker run -d -p 3001:3001 --name domino domino
 ## Project Structure
 
 ```
-├── client/          # React frontend (Vite)
-├── server/          # Node.js backend (Express + Socket.IO)
+├── client/          # React frontend (Vite + TypeScript)
+│   ├── src/         # Source code
+│   ├── public/      # Static assets
+│   └── package.json # Client dependencies & scripts
+├── server/          # Node.js backend (Express + Socket.IO + TypeScript)
+│   ├── src/         # Source code
+│   └── package.json # Server dependencies & scripts
 ├── tests/           # Playwright e2e tests
 ├── Dockerfile       # Multi-stage production build
 ├── REQUIREMENTS.md  # Full functional requirements
 └── TEST_CASES.md    # Test case definitions
 ```
+
+## Available npm Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run install:all` | Install dependencies for root, server, and client |
+| `npm run dev` | Start both server and client concurrently |
+| `npm run dev:server` | Start server only (watch mode) |
+| `npm run dev:client` | Start client only (Vite dev server) |
+| `npm run build` | Build server and client for production |
+| `npm run build:server` | Build server TypeScript to `server/dist/` |
+| `npm run build:client` | Build client to `client/dist/` |
+| `npm run start` | Run production server |
+| `npm run test:ui` | Run Playwright e2e tests |
